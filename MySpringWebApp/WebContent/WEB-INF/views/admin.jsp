@@ -8,9 +8,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>About.jsp</h1>
+	<h1>Admin.jsp</h1>
 	<br>
-	Atributo del controller about: <c:out value="${mensaje}"></c:out><br><br>
+	Atributo del controller admin: <c:out value="${mensaje}"></c:out><br><br>
 	Atributo de Session: <c:out value="${sessionScope.resultado}"></c:out>
 </body>
 </html>

@@ -10,5 +10,8 @@
 <body>
 	<h1>Hola, si puedes ver esto es que tu app funciona</h1>
 	<a href='<c:url value="/about" />' >About</a>
+	<br>
+	Atributo del controller about: <c:out value="${mensaje}"></c:out><br><br>
+	Atributo de Session: <c:out value="${sessionScope.resultado}"></c:out>
 </body>
 </html>
