@@ -2,6 +2,9 @@ package com.grupo4.controller;
 
 import javax.validation.Valid;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -44,6 +47,17 @@ public class UsuarioController {
 	public String handleUsuario(@ModelAttribute("usuario") Usuario usuarioForm, Model model) 
 	{
 		model.addAttribute("usuarioForm",usuarioForm);
+		SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
+		 
+		Session session = sessionFactory.openSession();
+		Transaction tr = session.beginTransaction();
+		Usuario user = new Usuario();
+		user.setNombre_usuario(usuarioForm.getNombre_usuario());
+		
+		session.save(user);
+		tr.commit();
+		System.out.println("Se guardó satisfactoriamente");
+		//sessionFactory.close();
 		return "index";
 	}
 }

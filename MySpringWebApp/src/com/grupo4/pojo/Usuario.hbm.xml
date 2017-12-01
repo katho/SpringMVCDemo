@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29/11/2017 09:38:28 AM by Hibernate Tools 5.2.6.Final -->
+<hibernate-mapping>
+ <class catalog="prueba_spring" name="com.grupo4.pojo.Usuario" table="usuario">
+  <id name="idusuario" type="java.lang.Integer">
+   <column name="idusuario"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="nombre_usuario" type="string">
+   <column length="45" name="nombre_usuario" not-null="true"/>
+  </property>
+ </class>
+</hibernate-mapping>
